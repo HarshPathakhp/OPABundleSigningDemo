@@ -1,0 +1,28 @@
+services:
+  bundle_service1:
+    url: http://localhost:8000/
+  bundle_service2:
+    url: http://localhost:8001/
+
+labels:
+  name: "discovery-bundle-tests"
+
+discovery:
+  resource: discovery.tar.gz
+  service: bundle_service1
+  decision: discovery/config
+  signing:
+    keyid: public_key_1
+
+default_decision: /v1/allow
+
+keys:
+  public_key_1:
+    key: |
+        -----BEGIN PUBLIC KEY-----
+        MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDOqJok4pa1+7qGcTYIim4asiiQ
+        D/AkUL0bMUlqpptT4YB1MLKhlac4E2yLUQbgW/vSORK8aUFKbn4ashogsFQAH/zu
+        qwJQSaQ/YHzGA0CkCV81LLvZmosrgryogUstnLY63gwdKhXXGoUafBHdtOjWnoSd
+        qyIQPbOqnL2GIzIqxwIDAQAB
+        -----END PUBLIC KEY-----
+
