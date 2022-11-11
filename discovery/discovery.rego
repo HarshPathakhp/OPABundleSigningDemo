@@ -1,6 +1,11 @@
 package discovery
 
 config = {
+    "services": {
+        "bundle_service2": {
+            "url": "http://localhost:8001/"
+        }
+    },
     "bundles": {
         "bundle1": {
             "resource": "bundle1.tar.gz",

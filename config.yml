@@ -1,8 +1,6 @@
 services:
   bundle_service1:
     url: http://localhost:8000/
-  bundle_service2:
-    url: http://localhost:8001/
 
 labels:
   name: "discovery-bundle-tests"
